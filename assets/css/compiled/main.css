@@ -1483,6 +1483,14 @@ video {
   padding-top: 2rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2620,6 +2628,10 @@ video {
 
   .md\:top-16 {
     top: 4rem;
+  }
+
+  .md\:top-20 {
+    top: 5rem;
   }
 
   .md\:inline-block {
