@@ -101,11 +101,11 @@ params:
       # width: 40
       # height: 20
       # link: /
-    width: wide
+    width: full
 
   page:
     # full (100%), wide (90rem), normal (1280px)
-    width: normal
+    width: full
 
   theme:
     # light | dark | system
