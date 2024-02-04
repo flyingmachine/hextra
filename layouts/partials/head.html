@@ -30,29 +30,30 @@
     {{ partial "google-analytics.html" . }}
   {{- end }}
 
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script>
-    /* Initialize light/dark mode */
-    const defaultTheme = '{{ site.Params.theme.default | default `system`}}';
+    <script>
+     /* Initialize light/dark mode */
+     const defaultTheme = '{{ site.Params.theme.default | default `system`}}';
 
-    const setDarkTheme = () => {
-      document.documentElement.classList.add("dark");
-      document.documentElement.style.colorScheme = "dark";
-    }
-    const setLightTheme = () => {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.style.colorScheme = "light";
-    }
+     const setDarkTheme = () => {
+       document.documentElement.classList.add("dark");
+       document.documentElement.style.colorScheme = "dark";
+     }
+     const setLightTheme = () => {
+       document.documentElement.classList.remove("dark");
+       document.documentElement.style.colorScheme = "light";
+     }
 
-    if ("color-theme" in localStorage) {
-      localStorage.getItem("color-theme") === "dark" ? setDarkTheme() : setLightTheme();
-    } else {
-      defaultTheme === "dark" ? setDarkTheme() : setLightTheme();
-      if (defaultTheme === "system") {
-        window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
-      }
-    }
-  </script>
+     if ("color-theme" in localStorage) {
+       localStorage.getItem("color-theme") === "dark" ? setDarkTheme() : setLightTheme();
+     } else {
+       defaultTheme === "dark" ? setDarkTheme() : setLightTheme();
+       if (defaultTheme === "system") {
+         window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
+       }
+     }
+    </script>
 
-  {{ partial "custom/head-end.html" . }}
+    {{ partial "custom/head-end.html" . }}
 </head>
